@@ -16,6 +16,16 @@
       // set the fontsize using textFit
       // and then set the publications header font to that size
       var bio = document.getElementById("bio");
+      var pad = Math.min(window.innerWidth, window.innerHeight) / 10;
+      var w = window.innerWidth - 2 * pad;
+      var h = window.innerHeight - 2 * pad;
+      bio.style.paddingBottom = pad;
+      bio.style.paddingTop = pad;
+      bio.style.paddingLeft = pad;
+      bio.style.paddingRight = pad;
+      bio.style.width = w;
+      bio.style.height = h;
+
       textFit(bio, {maxFontSize: 200});
       bio.style.visibility = "visible";
 
@@ -23,7 +33,7 @@
       document.getElementById("publications").style.fontSize = s;      
     }
 
-    window.setTimeout(doFit, 1000);
+    window.setTimeout(doFit, 100);
     window.addEventListener("resize", doFit);
 
   </script>
