@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>Jeff Ens</title>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <script>
+    window.onload = function() {
+      var a = document.getElementById("myLink");
+      a.setAttribute("href", "mailto:jeffe@sfu.ca");
+    }
+
+    function doFit(){
+      // set the fontsize using textFit
+      // and then set the publications header font to that size
+      var bio = document.getElementById("bio");
+      textFit(bio, {maxFontSize: 200});
+      bio.style.visibility = "visible";
+
+      var s = bio.getElementsByTagName("span")[0].style.fontSize;
+      document.getElementById("publications").style.fontSize = s;      
+    }
+
+    window.setTimeout(doFit, 1);
+    window.addEventListener("resize", doFit);
+
+  </script>
+  <script id="textFitLib" src="textFit.min.js"></script>
+  <style>
+
+  @font-face {
+    font-family: "myfont";
+    src: url("FormatGrotesk-Fett.woff") format('woff');
+  }
+
+  body {
+    background-color:#FAFAFA;
+    color: #212121;
+  }
+
+  .main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;
+    padding-left: 10vmin;
+    padding-right: 10vmin;
+    width: calc(100vw - 20vmin);
+    height: calc(100vh - 20vmin);
+    font-family: 'myfont', sans-serif;
+    visibility:hidden;
+  }
+
+  .pub {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;
+    padding-left: 10vmin;
+    padding-right: 10vmin;
+    width: calc(100vw - 20vmin);
+    height: calc(100vh - 20vmin);
+    font-family: 'myfont', sans-serif;
+  }
+
+  .pubList {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.5vmax;
+    line-height: 1.75vmax;
+    font-weight: lighter;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="main" id="bio">
+    I'm <span style="color:#F01313">Jeff Ens</span>, a Ph.D. candidate studying computational creativity at Simon Fraser University. To learn more, see my <a href="#publications"; style="color:black;">publications</a>. Have questions? <a id="myLink", href=""; style="color:black;">contact</a> me.
+  </div>
+
+  <div class="pub" id="publications">
+    Publications
+    <div class="pubList">
+      <br>
+      <a href="https://www.music-ir.org/mirex/abstracts/2019/EP1.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and P Pasquier. "Discriminating Symbolic Continuations with GenDetect". In <i>MIREX evaluation results</i>. 2019. <br><br>
+      <a href="http://archives.ismir.net/ismir2019/paper/000107.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and P Pasquier. "Quantifying Musical Style: Ranking Symbolic Music based on Similarity to a Style". In <i>Proceedings of the International Symposium on Music Information Retrieval</i>. Vol. 20. 2019, 870-877. (Oral Pres.)<br><br>
+      <a href="https://www.aclweb.org/anthology/W19-6139.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and M Hämäläinen and J Rueter and P Pasquier. "Morphosyntactic Disambiguation in an Endangered Language Setting". In <i>Proceedings of the Nordic Conference on Computational Linguistics</i>. Vol. 22. 2019, 345--349. (Poster)<br><br>
+      R Bougueng and J Ens and P Pasquier. "Apollo: An Interactive Web Environment for Generating Symbolic MusicalPhrases using Corpus-based Style Imitation". In <i>Proceedings of the International Workshop on Musical Metacreation</i>. Vol. 7. 2019. <br><br>
+      <a href="http://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_17.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and P Pasquier. "CAEMSI : A Cross-Domain Analytic Evaluation Methodology for Style Imitation". In <i>Proceedings of the International Conference of Computational Creativity</i>. Vol. 9. 2018, 64--71. (Oral Pres.) (Best Student Paper Award)<br><br>
+      <a href="http://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_69.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and P Pasquier. "MIDI Database and Representation Manager for Deep Learning". In <i>Proceedings of the International Conference of Computational Creativity</i>. Vol. 9. 2018, 304. (Poster)<br><br>
+      J Ens. "A Machine Learning Framework For Generative Art". In <i>Proceedings of the National Academy of Sciences Sackler Student Fellows Symposium</i>. 2018. (Oral Pres.) (28\% acceptance rate)<br><br>
+      <a href="https://archives.ismir.net/ismir2017/paper/000079.pdf", target="_blank", class="material-icons", style="text-decoration:none;font-size:1.2vmax">get_app</a> J Ens and B Riecke and P Pasquier. "The Significance of the Low Complexity Dimension in Music Similarity Judgements". In <i>Proceedings of the International Symposium on Music Information Retrieval</i>. Vol. 18. 2017, 31--38. (Oral Pres.)<br><br>
+      J Ens. "Generating Rhythm and Harmony". In <i>Presented at the FCAT Undergrad Conference</i>. 2016. (Oral Pres.)<br><br>
+    </div>
+  </div>
+</div>
+
+</body>

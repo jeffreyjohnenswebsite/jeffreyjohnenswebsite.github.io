@@ -1,0 +1,16 @@
+{ "highlightMenu" : "#efefef",
+  "defaultMenu" : "#3c424c",
+
+  "about" : {  "color" : "#efefef",
+                "background" : "#848484",
+                "text" : "I am a M.Sc. student at Simon Fraser University. My research interests include Machine Learning and Computational Creativity."
+  },
+  "publications" : { "color" : "#efefef",
+                      "background" : "#af4d4d",
+                      "text" : "The Significance of the Low Complexity Dimension in Similarity Judgements. International Symposium for Music Information Retrieval 2017."
+  },
+  "contact" : { "color" : "#efefef",
+                "background" : "#4e8aad",
+                "text" : "EMAIL : jeff[Last Name Initial].sfu.ca"
+  }
+}
