@@ -13,8 +13,7 @@
     }
 
     function doFit(){
-      // set the fontsize using textFit
-      // and then set the publications header font to that size
+      // set bio size with fitting font
       var bio = document.getElementById("bio");
       var pad = Math.min(window.innerWidth, window.innerHeight) / 10;
       var w = window.innerWidth - 2 * pad;
@@ -25,6 +24,8 @@
       bio.style.paddingRight = pad;
       bio.style.width = w;
       bio.style.height = h;
+
+      console.log("width : " + w.toString() + " height : " + h.toString());
 
       textFit(bio, {maxFontSize: 200});
       bio.style.visibility = "visible";
