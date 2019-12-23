@@ -25,13 +25,13 @@
       bio.style.width = w;
       bio.style.height = h;
 
-      console.log("width : " + w.toString() + " height : " + h.toString());
-
       textFit(bio, {maxFontSize: 200});
       bio.style.visibility = "visible";
+      var size = bio.getElementsByTagName("span")[0].style.fontSize;
 
-      var s = bio.getElementsByTagName("span")[0].style.fontSize;
-      document.getElementById("publications").style.fontSize = s;      
+      console.log("width : " + w.toString() + " height : " + h.toString() + " font size : " + size.toString());
+
+      document.getElementById("publications").style.fontSize = size;      
     }
 
     window.setTimeout(doFit, 100);
