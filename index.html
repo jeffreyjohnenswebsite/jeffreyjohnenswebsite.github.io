@@ -25,7 +25,7 @@
       bio.style.width = w;
       bio.style.height = h;
 
-      textFit(bio, {maxFontSize: 200, minFontSize: 40});
+      textFit(bio, {multiLine: true, maxFontSize: 200});
       bio.style.visibility = "visible";
       var size = bio.getElementsByTagName("span")[0].style.fontSize;
 
@@ -91,7 +91,11 @@
 <body>
   <div class="wrapper">
   <div class="main" id="bio">
-    I'm <span style="color:#F01313">Jeff Ens</span>, a Ph.D. candidate studying computational creativity at Simon Fraser University. To learn more, see my <a href="#publications"; style="color:black;">publications</a>. Have questions? <a id="myLink", href=""; style="color:black;">contact</a> me.
+    <span>
+      <span>
+        I'm <span style="color:#F01313">Jeff Ens</span>, a Ph.D. candidate studying computational creativity at Simon Fraser University. To learn more, see my <a href="#publications"; style="color:black;">publications</a>. Have questions? <a id="myLink", href=""; style="color:black;">Contact</a> me.
+      </span>
+    </span>
   </div>
 
   <div class="pub" id="publications">
