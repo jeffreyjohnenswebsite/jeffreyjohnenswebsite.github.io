@@ -6,7 +6,9 @@
   <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
+
     window.onload = function() {
       var a = document.getElementById("myLink");
       a.setAttribute("href", "mailto:jeffe@sfu.ca");
@@ -26,15 +28,17 @@
       bio.style.height = h;
 
       textFit(bio, {multiLine: true, maxFontSize: 200});
-      bio.style.visibility = "visible";
       var size = bio.getElementsByTagName("span")[0].style.fontSize;
+
+      //fade-in
+      $("#bio").animate({opacity: 1}, 1000);
+      $("#publications").animate({opacity: 1}, 1000);
 
       console.log("width : " + w.toString() + " height : " + h.toString() + " font size : " + size.toString());
 
       document.getElementById("publications").style.fontSize = size;      
     }
 
-    window.setTimeout(doFit, 100);
     window.setTimeout(doFit, 1000);
     window.addEventListener("resize", doFit);
 
@@ -48,7 +52,7 @@
   }
 
   body {
-    background-color:#FAFAFA;
+    background-color: #FAFAFA;
     color: #212121;
   }
 
@@ -63,7 +67,7 @@
     width: calc(100vw - 20vmin);
     height: calc(100vh - 20vmin);
     font-family: 'myfont', sans-serif;
-    visibility:hidden;
+    opacity: 0;
   }
 
   .pub {
@@ -77,6 +81,7 @@
     width: calc(100vw - 20vmin);
     height: calc(100vh - 20vmin);
     font-family: 'myfont', sans-serif;
+    opacity: 0;
   }
 
   .pubList {
@@ -92,11 +97,7 @@
 <body>
   <div class="wrapper">
   <div class="main" id="bio">
-    <span>
-      <span>
-        I'm <span style="color:#F01313">Jeff Ens</span>, a Ph.D. candidate studying computational creativity at Simon Fraser University. To learn more, see my <a href="#publications"; style="color:black;">publications</a>. Have questions? <a id="myLink", href=""; style="color:black;">Contact</a> me.
-      </span>
-    </span>
+    I'm <span style="color:#F01313">Jeff Ens</span>, a Ph.D. candidate studying computational creativity at Simon Fraser University. To learn more, see my <a href="#publications"; style="color:black;">publications</a>. Have questions? <a id="myLink", href=""; style="color:black;">Contact</a> me.
   </div>
 
   <div class="pub" id="publications">
